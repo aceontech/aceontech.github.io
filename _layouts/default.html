@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <-- Styles -->
+        <!-- Styles -->
         <link rel="stylesheet" href="/assets/css/bootstrap.css">
         <link rel="stylesheet" href="/assets/css/bootstrap-theme.css">
         <link rel="stylesheet" href="/assets/css/syntax.css">
@@ -19,30 +19,55 @@
         <![endif]-->
     </head>
     <body>
-
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Alex Manarpies (@aceontech)<br />
-                Mobile App Developer, Tech Enthusiast<br />
-                alex@manarpies.com
-              </p>
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">{{ site.name }}</a>
             </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/aceontech</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/aceontech</a><br />
-              </p>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="/posts.html">Blog</a></li>
+                    <li><a href="/apps">Apps</a></li>
+                    <li><a href="/resume">Resume</a></li>
+                    <li><a href="/talks">Talks</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+
+        <div class="container">
+            <!-- Content -->
+            {{ content }}
+        </div>
+
+        <div class="footer">
+            <div class="row">
+                <div class="col-md-3">
+                    <p>
+                        Alex Manarpies (@aceontech)<br />
+                        Mobile App Developer, Tech Enthusiast<br />
+                        alex@manarpies.com
+                    </p>
+                </div>
+                <div class="col-md-9">
+                    <p>
+                        <a href="https://github.com/yourusername">github.com/aceontech</a><br />
+                        <a href="https://twitter.com/yourusername">twitter.com/aceontech</a><br />
+                    </p>
+                </div>
             </div>
-          </div>
         </div>
 
         <!-- Scripts -->
