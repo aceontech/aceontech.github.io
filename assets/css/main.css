@@ -1,3 +1,56 @@
+body {
+    background-color: #f5f1e8;
+}
+
+.navbar-aot {
+    font-family: 'amaranthregular';
+    background: #b82d1d none;
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 0;
+}
+
+.navbar-aot .navbar-brand {
+    color: #f5f1e8;
+}
+
+.navbar-aot .navbar-brand .logo-aot {
+    width: 27px;
+    height: 14px;
+}
+
+.navbar-aot .navbar-nav > li > a {
+    text-transform: uppercase;
+    color: #f5f1e8;
+    text-shadow: none;
+}
+
+.navbar-aot .navbar-nav > li > a:hover {
+    background: #c33120 none;
+    color: #f5f1e8;
+}
+
+.navbar-aot .navbar-nav > .active > a {
+    font-family: 'amaranthbold';
+    background: #c33120 none;
+    color: white;
+}
+
+.navbar-aot .navbar-toggle {
+    border-color: #e03724;
+}
+
+.navbar-aot .navbar-toggle:hover {
+    background-color: #c33120;
+}
+
+.navbar-aot .navbar-toggle .icon-bar {
+    background-color: #f5f1e8;
+}
+
+.jumbotron-aot {
+    background-color: #c33120;
+}
 /*****************************************************************************/
 /*
 /* Home

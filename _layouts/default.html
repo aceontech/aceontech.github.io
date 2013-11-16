@@ -10,6 +10,9 @@
         <link rel="stylesheet" href="/assets/css/bootstrap.css">
         <link rel="stylesheet" href="/assets/css/bootstrap-theme.css">
         <link rel="stylesheet" href="/assets/css/syntax.css">
+
+        <link rel="stylesheet" href="/assets/fonts/amaranth-regular/stylesheet.css">
+        <link rel="stylesheet" href="/assets/fonts/amaranth-bold/stylesheet.css">
         <link rel="stylesheet" href="/assets/css/main.css">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -19,38 +22,38 @@
         <![endif]-->
     </head>
     <body>
-        <nav class="navbar navbar-default" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">{{ site.name }}</a>
-            </div>
+        <nav class="navbar navbar-aot" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img class="logo-aot" src="/assets/images/logo.png" alt="{{ site.name }}"></a>
+                </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="/posts.html">Blog</a></li>
-                    <li><a href="/apps">Apps</a></li>
-                    <li><a href="/resume">Resume</a></li>
-                    <li><a href="/talks">Talks</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="/posts.html">Blog</a></li>
+                        <li><a href="/apps">Apps</a></li>
+                        <li><a href="/resume">Resume</a></li>
+                        <li><a href="/talks">Talks</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
         </nav>
 
-        <div class="container">
-            <!-- Content -->
-            {{ content }}
-        </div>
+        <!-- Content -->
+        {{ content }}
 
         <footer>
             <div class="container">
