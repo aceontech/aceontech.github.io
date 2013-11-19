@@ -34,14 +34,18 @@ a, a:link, a:visited, a:hover, a:active {
 .jumbotron-aot {
     color: #f5f1e8;
     text-shadow: 1px 1px #9e2719;
+    padding-bottom: 3em;
 }
+
 
 .logotype-aot {
     margin: 0 auto 0 auto;
 }
 
 .resume-feature {
-    margin: 0 auto 0 auto;
+    float: none;
+    margin: 0 auto;
+    max-width: 85%;
 }
 
 /****************************************
@@ -56,11 +60,16 @@ a, a:link, a:visited, a:hover, a:active {
     margin-bottom: 0;
 }
 
+.aot-navbar-twitter {
+    margin-top: 3px;
+}
+
 .navbar-aot .navbar-brand {
     color: #f5f1e8;
 }
 
 .navbar-aot .navbar-brand .logo-aot {
+    margin-top: 2px;
 }
 
 .navbar-aot .navbar-nav > li > a {
