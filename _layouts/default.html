@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="/assets/css/bootstrap-theme.css">
         <link rel="stylesheet" href="/assets/css/syntax.css">
 
+        <link rel="stylesheet" href="/assets/fonts/abeezee-regular/stylesheet.css">
         <link rel="stylesheet" href="/assets/fonts/amaranth-regular/stylesheet.css">
         <link rel="stylesheet" href="/assets/fonts/amaranth-bold/stylesheet.css">
         <link rel="stylesheet" href="/assets/css/main.css">
@@ -38,22 +39,24 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="/posts.html">Blog</a></li>
-                        <li><a href="/apps">Apps</a></li>
-                        <li><a href="/resume">Resume</a></li>
-                        <li><a href="/talks">Talks</a></li>
+                        <li class="{% if page.active == 'index' %} active {% endif %}"><a href="/">Home</a></li>
+                        <li class="{% if page.active == 'posts' %} active {% endif %}"><a href="/posts.html">Blog</a></li>
+                        <li class="{% if page.active == 'apps' %} active {% endif %}"><a href="/apps">Apps</a></li>
+                        <li class="{% if page.active == 'resume' %} active {% endif %}"><a href="/resume">Resume</a></li>
+                        <li class="{% if page.active == 'talks' %} active {% endif %}"><a href="/talks">Talks</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="http://twitter.com/aceontech">Twitter</a></li>
+                        <li><a href="http://linkedin.com/in/alexmanarpies">LinkedIn</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div>
         </nav>
 
-        <!-- Content -->
-        {{ content }}
+        <div id="wrap">
+            <!-- Content -->
+            {{ content }}
+        </div>
 
         <footer>
             <div class="container">
@@ -78,5 +81,6 @@
         <!-- Scripts -->
         <script src="/assets/js/jquery-1.10.2.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/retina-1.1.0.min.js"></script>
     </body>
 </html>
