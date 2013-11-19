@@ -41,9 +41,9 @@
                     <ul class="nav navbar-nav">
                         <li class="{% if page.active == 'index' %} active {% endif %}"><a href="/">Home</a></li>
                         <li class="{% if page.active == 'posts' %} active {% endif %}"><a href="/posts.html">Blog</a></li>
-                        <li class="{% if page.active == 'apps' %} active {% endif %}"><a href="/apps">Apps</a></li>
-                        <li class="{% if page.active == 'resume' %} active {% endif %}"><a href="/resume">Resume</a></li>
-                        <li class="{% if page.active == 'talks' %} active {% endif %}"><a href="/talks">Talks</a></li>
+                        <li class="{% if page.active == 'apps' %} active {% endif %}"><a href="/apps.html">Apps</a></li>
+                        <li class="{% if page.active == 'resume' %} active {% endif %}"><a href="/resume.html">Resume</a></li>
+                        <li class="{% if page.active == 'talks' %} active {% endif %}"><a href="/talks.html">Talks</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="http://twitter.com/aceontech"><img src="/assets/images/twitter-navbar.png" alt="Twitter"/></a></li>
@@ -53,6 +53,11 @@
         </nav>
 
         <div id="wrap">
+            <!-- Scripts -->
+            <script src="/assets/js/jquery-1.10.2.js"></script>
+            <script src="/assets/js/bootstrap.min.js"></script>
+            <script src="/assets/js/retina-1.1.0.min.js"></script>
+
             <!-- Content -->
             {{ content }}
         </div>
@@ -60,26 +65,25 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-5 footer-left">
                         <p>
-                            <a href="https://github.com/aceontech">github.com/aceontech</a><br />
-                            <a href="https://twitter.com/aceontech">twitter.com/aceontech</a><br />
+                            Alex Manarpies (@aceontech)<br/>
+                            Tech Enthusiast & Mobile App Developer
                         </p>
                     </div>
-                    <div class="col-sm-9">
+                    <div class="col-sm-2">
+                        <div class="footer-logo">
+                            <img src="/assets/images/logo.png" alt="aot"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 footer-right">
                         <p>
-                            Alex Manarpies (@aceontech)<br />
-                            Mobile App Developer, Tech Enthusiast<br />
-                            alex@manarpies.com
+                            Built with Jekyll & Bootstrap<br/>
+                            Hosted by GitHub
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
-
-        <!-- Scripts -->
-        <script src="/assets/js/jquery-1.10.2.js"></script>
-        <script src="/assets/js/bootstrap.min.js"></script>
-        <script src="/assets/js/retina-1.1.0.min.js"></script>
     </body>
 </html>

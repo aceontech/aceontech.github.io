@@ -37,8 +37,11 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 .logotype-aot {
-    max-width: 50%;
-    height: 70%;
+    margin: 0 auto 0 auto;
+}
+
+.resume-feature {
+    margin: 0 auto 0 auto;
 }
 
 /****************************************
@@ -94,9 +97,6 @@ a, a:link, a:visited, a:hover, a:active {
     background-color: #c33120;
 }
 
-.jumbotron-deco {
-}
-
 /****************************************
  * Content
  ****************************************/
@@ -143,6 +143,10 @@ a, a:link, a:visited, a:hover, a:active {
     color: #ffffff !important;
 }
 
+.jumbotron-aot .btn-primary {
+    color: #f5f1e8;
+}
+
 /****************************************
  * Blog
  ***************************************/
@@ -178,6 +182,81 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 /****************************************
+ * Talks
+ ***************************************/
+
+.carousel-talks-wrapper {
+    height: 210px;
+}
+
+.carousel-talks .carousel-indicators {
+    bottom: 0;
+    top: 100%;
+}
+
+@media (max-width: 767px) {
+    .carousel-talks-wrapper {
+        height: 240px;
+    }
+
+    .carousel-talks .carousel-indicators {
+        top: 90%;
+    }
+}
+
+.content-talks h1 {
+    padding-bottom: .5em;
+}
+
+.aot-talks-slide-preview {
+    border-radius: 1em;
+    margin: 0 auto 0 auto;
+}
+
+.aot-pad-top-1 {
+    padding-top: 1em;
+}
+
+.aot-pad-bottom-1 {
+    padding-bottom: 1em;
+}
+
+.aot-talks-action-buttons {
+    padding-top: 1em;
+}
+
+.content-talks .row {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.content-talks h1 {
+    text-align: left;
+}
+
+@media (max-width: 767px) {
+
+    .content-talks .row {
+        padding-top: 2em;
+        padding-bottom: 5em;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .content-talks {
+        text-align: center;
+    }
+
+    .content-talks h1 {
+        text-align: center;
+    }
+    .content-talks .lead {
+        padding-top: 1em;
+    }
+}
+
+/****************************************
  * Footer
  ****************************************/
 
@@ -189,4 +268,36 @@ footer {
 
     padding-top: 3em;
     padding-bottom: 4em;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+@media (max-width: 767px) {
+    .footer-left {
+        text-align: center;
+    }
+
+    .footer-right {
+        padding-top: .8em;
+        text-align: center;
+    }
+}
+
+.footer-logo {
+    margin: 0 auto 0 auto;
+    background-color: black;
+    width: 50px;
+    border-radius: .5em;
+    padding: .5em;
+    box-shadow: 0px 1px 1px #424242;
+}
+
+.footer-logo img {
+    opacity: .5;
 }
