@@ -37,6 +37,9 @@ a, a:link, a:visited, a:hover, a:active {
     padding-bottom: 3em;
 }
 
+.jumbotron-aot a {
+    color: #ffa2a2;
+}
 
 .logotype-aot {
     margin: 0 auto 0 auto;
@@ -194,23 +197,9 @@ a, a:link, a:visited, a:hover, a:active {
  * Talks
  ***************************************/
 
-.carousel-talks-wrapper {
-    height: 210px;
-}
-
-.carousel-talks .carousel-indicators {
-    bottom: 0;
-    top: 100%;
-}
-
-@media (max-width: 767px) {
-    .carousel-talks-wrapper {
-        height: 240px;
-    }
-
-    .carousel-talks .carousel-indicators {
-        top: 90%;
-    }
+.jumbotron-aot .btn {
+    padding-top: .5em;
+    margin-bottom: .5em;
 }
 
 .content-talks h1 {
