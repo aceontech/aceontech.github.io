@@ -11,10 +11,10 @@ active: index
 </div>
 
 <div id="home" class="container content-aot content-blog">
-    <h1>BLOG</h1>
 
     {% for post in site.posts %}
 
+    {% if forloop.index < 5 %}
     <div class="row blog-excerpt">
         <div class="col-xs-2 blog-image">
             <img src="{{ site.url }}/assets/images/posts/{{ post.image }}"/>
@@ -29,6 +29,11 @@ active: index
             </p>
         </div>
     </div>
+    {% endif %}
 
     {% endfor %}
+
+    <p class="text-center">
+        <a href="/posts.html" class="btn btn-primary btn-lg">More Blog Posts</a>
+    </p>
 </div>

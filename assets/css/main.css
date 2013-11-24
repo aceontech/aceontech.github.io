@@ -27,6 +27,15 @@ a, a:link, a:visited, a:hover, a:active {
     min-height: 100%;
 }
 
+pre {
+    background-color: transparent;
+    border: none;
+}
+
+.highlight {
+    border-radius: 4px;
+}
+
 /****************************************
  * Header
  ****************************************/
@@ -197,6 +206,17 @@ a, a:link, a:visited, a:hover, a:active {
 
 .jumbotron-aot .blog-excerpt {
     margin-bottom: 0;
+}
+
+.aot-jumbotron-blogpost .blog-image img {
+    border-radius: 40em;
+    width: auto;
+    height: auto;
+    max-width: 100px;
+}
+
+.blog-image .blog-post-date {
+    padding-top: 1em;
 }
 
 /****************************************
