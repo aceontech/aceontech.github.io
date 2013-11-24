@@ -12,52 +12,23 @@ active: index
 
 <div id="home" class="container content-aot content-blog">
     <h1>BLOG</h1>
+
+    {% for post in site.posts %}
+
     <div class="row blog-excerpt">
         <div class="col-xs-2 blog-image">
-            <img src="http://placehold.it/300x300"/>
+            <img src="{{ site.url }}/assets/images/posts/{{ post.image }}"/>
         </div>
         <div class="col-xs-10">
-            <h2>Nulla Facilisi</h2>
-            <p class="text-muted blog-post-date">5 minutes ago</p>
-            <p>Duis aliquet viverra felis id facilisis. In quis est ullamcorper mi blandit imperdiet. Nulla facilisi. Duis neque
-                orci, interdum vel molestie nec, <a href="http://google.com">dignissim</a>  et nisl.</p>
+            <h2>{{ post.title }}</h2>
+            <p class="text-muted blog-post-date">{{ post.date | date_to_string }}</p>
+            {{ post.excerpt }}
             <p>
-                <a href="/posts.html" class="btn btn-primary btn-xs">Read more</a>
-                <a href="/posts.html#comments" class="btn btn-info btn-xs">No comments</a>
+                <a href="{{ post.url }}" class="btn btn-primary btn-xs">Read more</a>
+                <a href="{{ post.url }}#comments" class="btn btn-info btn-xs">No comments</a>
             </p>
         </div>
     </div>
 
-    <div class="row blog-excerpt">
-        <div class="col-xs-2 blog-image">
-            <a href="/posts"><img src="http://placehold.it/300x300"/></a>
-        </div>
-        <div class="col-xs-10">
-            <h2>In Quis Est</h2>
-            <p class="text-muted blog-post-date">Yesterday at 10:45 AM</p>
-            <p>Duis aliquet viverra felis id facilisis. In quis est ullamcorper mi blandit imperdiet. Nulla facilisi. Duis neque
-                orci, interdum vel molestie nec, <a href="http://google.com">dignissim</a>  et nisl. Nulla tempor purus dui, et dignissim metus rhoncus non.
-                Aenean pretium suscipit malesuada. Duis in dui faucibus, fringilla sapien ac.</p>
-            <p>
-                <a href="/posts.html" class="btn btn-primary btn-xs">Read more</a>
-                <a href="/posts.html#comments" class="btn btn-info btn-xs">2 comments</a>
-            </p>
-        </div>
-    </div>
-
-    <div class="row blog-excerpt">
-        <div class="col-xs-2 blog-image">
-            <img src="http://placehold.it/300x300"/>
-        </div>
-        <div class="col-xs-10">
-            <h2>Duis aliquam quam nec</h2>
-            <p class="text-muted blog-post-date">November 16, 2013 at 10:45 AM</p>
-            <p>Duis aliquet viverra felis id facilisis. In quis est ullamcorper mi blandit imperdiet. Nulla facilisi. Duis neque
-                orci, interdum vel molestie nec.</p>
-            <p>
-                <a href="/posts.html" class="btn btn-primary btn-xs">Read more</a>
-                <a href="/posts.html#comments" class="btn btn-info btn-xs">No comments</a>
-            </p>
-        </div>
-    </div>
+    {% endfor %}
 </div>
