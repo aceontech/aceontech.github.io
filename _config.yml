@@ -1,6 +1,6 @@
 name: Ace on Tech
 description: Alex Manarpies / Ace on Tech
-url: http://www.aceontech.com
+url: http://aceontech.github.io
 markdown: redcarpet
 pygments: true
 paginate: 5
