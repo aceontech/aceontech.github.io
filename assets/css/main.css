@@ -219,6 +219,12 @@ pre {
     padding-top: 1em;
 }
 
+#disqus_thread {
+    padding-left: 1em;
+    padding-right: 1em;
+    font-family: 'abeezeeregular', 'Lucida Grande', Arial, Verdana, sans-serif;
+}
+
 /****************************************
  * Talks
  ***************************************/
