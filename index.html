@@ -17,15 +17,17 @@ active: index
     {% if forloop.index < 5 %}
     <div class="row blog-excerpt">
         <div class="col-xs-2 blog-image">
-            <img src="{{ site.url }}/assets/images/posts/{{ post.image }}"/>
+            <a href="{{ post.url }}">
+                <img src="{{ site.url }}/assets/images/feature/{{ post.image }}"/>
+            </a>
         </div>
         <div class="col-xs-10">
             <h2>{{ post.title }}</h2>
             <p class="text-muted blog-post-date">{{ post.date | date_to_string }}</p>
             {{ post.excerpt }}
             <p>
-                <a href="{{ post.url }}" class="btn btn-primary btn-xs">Read more</a>
-                <a href="{{ post.url }}#disqus_thread" class="btn btn-info btn-xs">Comments</a>
+                <a href="{{ post.url }}" class="btn btn-primary btn-sm">Read more</a>
+                <a href="{{ post.url }}#disqus_thread" class="btn btn-info btn-sm">Comments</a>
             </p>
         </div>
     </div>
