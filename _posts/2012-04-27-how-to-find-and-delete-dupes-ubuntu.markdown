@@ -3,14 +3,17 @@ layout: post
 title:  "How to find and delete duplicate files in Ubuntu/Linux"
 date:   2012-04-27 15:18:32
 categories: howto linux
-image: windows-phone-logo.jpg
+image: ubuntu-logo.png
 ---
 
 Massively duplicated files are oftentimes a problem with music and movie collections. Because hunting for dupes by hand is definitely not the way to go, you may want to look to command-line tools like **fdupes** for help.
 
 **fdupes** is available via apt-get in Ubuntu, so install it first:
 
+{% highlight bash %}
 sudo apt-get install fdupes
+{% endhighlight %}
+
 This is the basic syntax for looking up duplicated files:
 
 {% highlight bash %}
