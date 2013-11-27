@@ -13,6 +13,9 @@ layout: default
         <div class="col-md-2 blog-image text-center">
             <img src="{{ site.url }}/assets/images/feature/{{ page.image }}"/>
             <p class="text-muted blog-post-date">{{ page.date | date_to_string }}</p>
+            {% if page.words %}
+            <p class="text-muted blog-post-words"><small>~{{ page.words }} words</small></p>
+            {% endif %}
             <p><a href="{{ post.url }}#disqus_thread" class="btn btn-info btn-sm">Comments</a></p>
         </div>
         <div class="col-md-10">
