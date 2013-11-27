@@ -4,12 +4,13 @@ title:  "How to parse RSS/Podcast feeds with NodeJS"
 date:   2013-11-27 17:00:00
 categories: howto nodejs
 image: nodejs-logo.png
-words: 819
+words: 870
 ---
 
 RSS is still very much alive and kicking, irrespective of Google severing the umbilical cord from [Google Reader](http://news.cnet.com/8301-1023_3-57591616-93/rip-google-reader/) in July. It still powers much of the web's news sites and delivers thousands of podcasts every day. But who wants to parse XML anymore these days? Here's how to get to parsing those feeds in minutes with [NodeJS](http://nodejs.org/) and the [feedparser](https://npmjs.org/package/feedparser) module.
 
 **Impatient**? [Skip](#parsing) to the code.
+**Working example code** can be found on [GitHub](https://github.com/aceontech/aot-nodejs-feedparser-sample) ([ZIP file](https://github.com/aceontech/aot-nodejs-feedparser-sample/archive/master.zip)).
 
 ## Prerequisites
 I'm assuming you've already set up the following:
@@ -44,7 +45,7 @@ $ npm install
 **feedparser** is now includable via **require()**.
 
 ## A quick note on NodeJS Streams
-With NodeJS Streams ([API documentation](http://nodejs.org/api/stream.html#stream_class_stream_readable)), inherently slow I/O channels (like HTTP or file-system access) are exposed as unified event-emitting APIs in the form of stream.Readable and stream.Writeable. The only thing you really need to know about this is that the stream APIs return data in **chunks**. You - as the developer - are responsible for handling these chunks properly, i.e. don't expect the 'chunk' or 'readable' events to mean 'done'.
+With NodeJS Streams ([API documentation](http://nodejs.org/api/stream.html#stream_class_stream_readable)), inherently slow I/O channels (like HTTP or file-system access) are exposed as unified event-emitting APIs in the form of stream.Readable and stream.Writeable. The only thing you need to remember is that the stream APIs return data in **chunks**. You - as the developer - are responsible for handling these chunks properly, i.e. don't expect the 'chunk' or 'readable' events to mean 'done'.
 
 You can find more information on NodeJS Streams on [Max Ogden](http://maxogden.com/)'s [blog](http://maxogden.com/node-streams.html).
 
@@ -119,8 +120,10 @@ http.get('http://leoville.tv/podcasts/sn.xml', function(res) {
 
 And.. That's all there is to it, really. In essence, just a couple of lines of JavaScript were required to convert the RSS feed into a plain JSON object. This object can now be stored away into a database or the like. Not too shabby.
 
+I would like to point out that you may not want to parse the whole feed every time a user requests it. A better (less resource-hungry) solution would be to cache the parsed feed and only refresh it once the feed's [TTL](http://www.w3schools.com/rss/rss_tag_ttl.asp) has expired.
+
 ## GitHub
-You can find [my working example](http://github.com/) on GitHub. It uses Express to route HTTP call to the correct controller. Try it out.
+You can find [my working example](https://github.com/aceontech/aot-nodejs-feedparser-sample) on GitHub. It uses Express to route HTTP calls to the correct controller. Try it out.
 
 ## Errata
 As a front-end app developer I don't often get to dabble with server-side code. Why? Perhaps because it's a little too abstract, or just a wee bit daunting to approach without sufficient background. The JavaScript-based  [NodeJS](http://nodejs.org/), however, turns out to be a different beast altogether. It has been on my radar since its inception in 2009, but until recently, I never dug into it for real (I have merely used it once or twice to hack something together quickly). The ecosystem surrounding Node has become vibrant and mature, with the [NPM Registry](https://npmjs.org/) as the main vehicle for acquiring third-party/open source libraries. It currently serves almost 50,000 modules, and solicits over 7 million downloads per day. It's functionally comparable to [CocoaPods](http://cocoadocs.org/) for iOS, or [Bower](http://bower.io/) for front-end JavaScript (honorable mentions go to [NuGet](http://www.nuget.org/) and [Gradle](http://www.gradle.org/)).
