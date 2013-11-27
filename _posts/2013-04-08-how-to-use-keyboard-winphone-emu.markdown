@@ -4,6 +4,7 @@ title:  "How to use your computer's keyboard with the Windows Phone emulators"
 date:   2013-04-08 15:18:32
 categories: howto windows phone
 image: windows-phone-logo.jpg
+permalink: /2013/04/08/how-to-use-your-computers-keyboard-with-the-windows-phone-emulators
 ---
 
 It’s a little known fact (at least, it was to me) that you can actually use your computer’s keyboard when interacting with the Windows Phone 7 & 8 emulators. This feature is somewhat hidden and differs slightly between the major OS versions:

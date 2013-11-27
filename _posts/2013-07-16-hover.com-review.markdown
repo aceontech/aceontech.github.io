@@ -4,6 +4,7 @@ title:  "Hover.com Review"
 date:   2013-07-16 15:18:32
 categories: review web
 image: hover-logo.jpg
+permalink: /2012/07/16/hover-com-review
 ---
 
 [Hover.com](http://hover.com) is a nifty little domain registrar I heard about on one of [Leo Laporte’s podcasts](http://twit.tv). This company is actually run by [Tucows Inc.](http://tucows.com) – a rather well known Internet establishment, famous for its software download portal, and its recent foray into the mobile world with [Ting.com](http://ting.com).
