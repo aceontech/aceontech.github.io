@@ -4,7 +4,7 @@ title:  "How to parse RSS/Podcast feeds with NodeJS"
 date:   2013-11-27 17:00:00
 categories: howto nodejs
 image: nodejs-logo.png
-words: 872
+words: 873
 ---
 
 RSS is still very much alive and kicking, irrespective of  [Google Reader](http://news.cnet.com/8301-1023_3-57591616-93/rip-google-reader/)'s closure back in July. It still powers many of the web's news sites and delivers thousands of podcasts every day. But who wants to parse XML anymore these days? Here's how to get to parsing those feeds in minutes with [NodeJS](http://nodejs.org/) and the [feedparser](https://npmjs.org/package/feedparser) module.
@@ -118,7 +118,7 @@ http.get('http://leoville.tv/podcasts/sn.xml', function(res) {
 });
 {% endhighlight %}
 
-And.. That's all there is to it, really. In essence, just a couple of lines of JavaScript were required to convert the RSS feed into a plain JSON object. This object can now be persisted in database or the like. Not too shabby, huh?
+And.. That's all there is to it, really. In essence, just a couple of lines of JavaScript were required to convert the RSS feed into a plain JSON object. This object can now be persisted to a database or the like. Not too shabby, huh?
 
 On a closing note, I would like to point out that you may not want to parse the whole feed every time a user requests it. A better (less resource-hungry) solution would be to cache the parsed feed and only refresh it once the feed's [TTL](http://www.w3schools.com/rss/rss_tag_ttl.asp) expires.
 
