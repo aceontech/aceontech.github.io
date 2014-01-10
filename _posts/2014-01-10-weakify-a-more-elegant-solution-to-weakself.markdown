@@ -65,6 +65,6 @@ You can add the entire **libextobjc** via *CocoaPods* to your project, or choose
 
 If you're already using [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa), the macros are already available to you, since ReactiveCocoa depends on *libextobjc*.
 
-## A note on the use macros
+## A note on the use of macros
 
 Sometimes it's okay to use macros. 
