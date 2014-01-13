@@ -16,12 +16,19 @@ It may be unclear to new Objective-C developers that referencing *self* in a blo
 The obvious solution to this problem is to define a weak reference to *self* before the block (let's call it *weakSelf*), and use that instead while calling into *self* from a block. For example:
 
 {% highlight objc %}
+// Create a weak reference to self
 __weak typeof(self)weakSelf = self;
 [self.context performBlock:^{
-    // Do something
+    // Create a strong reference to self, based on the previous weak reference.
+    // This prevents a direct strong reference so we don't get into a retain cycle to self.
+    // Also, it prevents self from becoming nil half-way, but still properly decrements the retain count
+    // at the end of the block.
+    __strong typeof(weakSelf)strongSelf = weakSelf;
+
+    // Do something else
 
     NSError *error;
-    [weakSelf.context save:&error];
+    [strongSelf.context save:&error];
 
     // Do something else
 }];
@@ -42,10 +49,10 @@ It's awfully verbose, but a necessity. So just do it and thank me later. There i
 // Do stuff
 @weakify(self)
 [self.context performBlock:^{
-    // You technically *only* need to call @strongify if you want to make sure self can't become nil in the middle of the block's execution. *@strongify* will thus retain the weak version of *self* at the beginning of the block, and release it at the end.
+    // Analog to strongSelf in previous code snippet.
     @strongify(self)
 
-    // You can just reference self as you usually would. Hurray.
+    // You can just reference self as you normally would. Hurray.
     NSError *error;
     [self.context save:&error];
 
@@ -57,7 +64,7 @@ I love this solution because:
 
 - It's easy to type
 - It's easy to read and pick out with syntax highlighting
-- It obviates the use of variables like *weakSelf* or *wself*, because it effectively shadows *self*
+- It obviates the use of variables like *weakSelf* and *strongSelf*, because it effectively shadows *self*
 
 ## Adding it to your project (CocoaPods)
 
@@ -67,4 +74,4 @@ If you're already using [ReactiveCocoa](https://github.com/ReactiveCocoa/Reactiv
 
 ## A note on the use of macros
 
-Sometimes it's okay to use macros. 
+Sometimes it's okay to use macros.
