@@ -46,6 +46,8 @@ Adding insult to injury, it's also a regular [PITA](http://www.urbandictionary.c
 It's awfully verbose, but a necessity. So just do it and thank me later. There is, however, one more optimization we can adopt: the **@weakify()** and **@strongify()** macros provided by the  [libextobjc](https://github.com/jspahrsummers/libextobjc) library. Check it out:
 
 {% highlight objc %}
+#import <EXTScope.h>
+
 // Do stuff
 @weakify(self)
 [self.context performBlock:^{
