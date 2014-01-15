@@ -15,7 +15,7 @@ After [hooking up your account](http://about.travis-ci.org/docs/user/getting-sta
 
 The following **.travis.yml** builds all dependencies, the iOS project itself and runs all tests in the **iOS Simulator** (from [aceontech/ReactiveNSXMLParser](https://github.com/aceontech/ReactiveNSXMLParser/blob/master/.travis.yml)):
 
-{% highlight yml %}
+{% highlight yaml %}
 language: objective-c
 
 before_install:
