@@ -1,6 +1,30 @@
-name: Ace on Tech
-description: Alex Manarpies / Ace on Tech
+# Site settings
+title: Alex Manarpies / aceontech
+email: alex AT manarpies DOT com
 url: http://aceontech.com
-markdown: redcarpet
-pygments: true
-paginate: 5
+description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary-dark: '#000000'
+  links: '#219ab3'
+
+# Footer settings
+footer: Alex Manarpies / aceontech
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: https://twitter.com/aceontech
+  - title: facebook
+    url: https://facebook.com/alex.manarpies
+  - title: stack-overflow
+    url: http://stackoverflow.com/users/331283/aceontech
+  - title: bitbucket
+    url: https://bitbucket.org/aceontech
+  - title: github
+    url: https://github.com/aceontech
+
+# Build settings
+markdown: kramdown
+permalink: pretty
